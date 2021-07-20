@@ -2,6 +2,7 @@ from flask import Flask, request, redirect, abort
 import configparser
 import validators
 import shortuuid
+import logging
 from db import UrlDatabase
 
 config = configparser.ConfigParser()
@@ -41,7 +42,7 @@ def shorten():
             return short_url
 
         except Exception as e:
-            print(e)
+            logging.exception('POST data format not correct')
             return 'POST data format not correct'
     else:
         return 'Method not supported'
