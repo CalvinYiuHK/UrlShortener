@@ -1,7 +1,17 @@
 # Flask Url Shortening API
 This is a API to provide url shortening service. 
 
-## Installation
+## Installation (Docker)
+First, build the docker image
+```commandline
+$ docker build -t python-urlshortener .
+```
+
+Then, run the docker image
+```commandline
+$ docker run -p [port]:[port] python-urlshortener .
+```
+## Installation (non-Docker)
 Run the following line to install all the required package
 ```commandline
 $ pip install -r requirements.txt
@@ -12,6 +22,7 @@ To use the service, the flask server need to be running, run the following comma
 ```commandline
 $ python app.py
 ```
+
 
 ## Use the service
 When the service is running, it will accept two api request, one is for url shortening, one is for redirect the shortened url to the original url

@@ -60,4 +60,4 @@ def code_router(code):
 
 
 if __name__ == '__main__':
-    app.run(port=config['general']['Port'])
+    app.run(port=config['general']['Port'], host='0.0.0.0')
